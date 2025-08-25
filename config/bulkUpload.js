@@ -1,14 +1,14 @@
 import { collection, doc, setDoc } from "firebase/firestore";
-import { slots } from "../store/restaurants";
+import { menu } from "../store/restaurants";
 import { db } from "./firebaseConfig";
 
-const restaurantData = slots
+const restaurantData = menu
 
 const uploadData = async () => {
     try{
         for(let i = 0; i < restaurantData.length; i++){
             const restaurant = restaurantData[i];
-            const docRef = doc(collection(db,"slot"),`slot_${i+1}`);
+            const docRef = doc(collection(db,"menu"),`menu_${i+1}`);
             await setDoc(docRef, restaurant);
         }
             console.log("Data uploaded");

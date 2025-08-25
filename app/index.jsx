@@ -9,7 +9,7 @@ export default function Index() {
 
   const handleGuest = async() => {
     await AsyncStorage.setItem("isGuest", "true");
-    // await AsyncStorage.setItem("email",null);
+    await AsyncStorage.removeItem("userEmail");
     router.push("/Home")
   }
   return (

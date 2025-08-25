@@ -199,7 +199,7 @@ const history = () => {
             Please sign in to view your booking history
           </Text>
           <TouchableOpacity
-            onPress={() => router.push("/signin")}
+            onPress={() => router.push("/Signin")}
             className="px-6 py-3 bg-[#f49b33] rounded-2xl shadow-md shadow-black"
           >
             <Text className="text-lg font-bold text-black">Sign In</Text>

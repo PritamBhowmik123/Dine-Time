@@ -301,10 +301,168 @@ const slots = [
     ref_id: "/restaurants/restaurant_12",
     slot: ["11:00", "13:00", "15:00", "17:00", "19:00", "21:00", "23:00"],
   },
+  
+];
+
+const menu = [
   {
-    ref_id: "/restaurants/restaurant_13",
-    slot: ["12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
+    ref_id: "/restaurants/restaurant_1",
+    dishes: [
+      { name: "Jambalaya", price: 19, category: "Main Course" },
+      { name: "Gumbo", price: 16, category: "Soup" },
+      { name: "Fried Catfish", price: 18, category: "Main Course" },
+      { name: "Beignets", price: 6, category: "Dessert" },
+      { name: "Cajun Shrimp Skewers", price: 12, category: "Starter" },
+      { name: "Po' Boy Sandwich", price: 15, category: "Main Course" },
+      { name: "Pecan Pie", price: 7, category: "Dessert" },
+      { name: "Creole Salad", price: 10, category: "Salad" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_2",
+    dishes: [
+      { name: "Margherita Pizza", price: 14, category: "Main Course" },
+      { name: "Pepperoni Pizza", price: 16, category: "Main Course" },
+      { name: "Caprese Salad", price: 11, category: "Salad" },
+      { name: "Tiramisu", price: 8, category: "Dessert" },
+      { name: "Bruschetta", price: 9, category: "Starter" },
+      { name: "Minestrone Soup", price: 7, category: "Soup" },
+      { name: "Fettuccine Alfredo", price: 17, category: "Main Course" },
+      { name: "Gelato", price: 6, category: "Dessert" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_3",
+    dishes: [
+      { name: "Chicken Tikka Masala", price: 18, category: "Main Course" },
+      { name: "Butter Naan", price: 5, category: "Starter" },
+      { name: "Paneer Butter Masala", price: 16, category: "Main Course" },
+      { name: "Gulab Jamun", price: 6, category: "Dessert" },
+      { name: "Dal Tadka", price: 14, category: "Main Course" },
+      { name: "Masala Papad", price: 4, category: "Starter" },
+      { name: "Veg Biryani", price: 15, category: "Main Course" },
+      { name: "Kheer", price: 7, category: "Dessert" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_4",
+    dishes: [
+      { name: "Sushi Platter", price: 22, category: "Main Course" },
+      { name: "Miso Soup", price: 6, category: "Soup" },
+      { name: "Tempura Prawns", price: 12, category: "Starter" },
+      { name: "Ramen", price: 17, category: "Main Course" },
+      { name: "Sashimi", price: 20, category: "Main Course" },
+      { name: "Edamame", price: 5, category: "Starter" },
+      { name: "Mochi Ice Cream", price: 8, category: "Dessert" },
+      { name: "Seaweed Salad", price: 9, category: "Salad" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_5",
+    dishes: [
+      { name: "Cheeseburger", price: 14, category: "Main Course" },
+      { name: "BBQ Ribs", price: 20, category: "Main Course" },
+      { name: "Buffalo Wings", price: 11, category: "Starter" },
+      { name: "Caesar Salad", price: 10, category: "Salad" },
+      { name: "Mac & Cheese", price: 12, category: "Main Course" },
+      { name: "Clam Chowder", price: 9, category: "Soup" },
+      { name: "Apple Pie", price: 7, category: "Dessert" },
+      { name: "Brownie Sundae", price: 8, category: "Dessert" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_6",
+    dishes: [
+      { name: "Pad Thai", price: 15, category: "Main Course" },
+      { name: "Tom Yum Soup", price: 8, category: "Soup" },
+      { name: "Spring Rolls", price: 7, category: "Starter" },
+      { name: "Green Curry", price: 16, category: "Main Course" },
+      { name: "Thai Fried Rice", price: 14, category: "Main Course" },
+      { name: "Papaya Salad", price: 9, category: "Salad" },
+      { name: "Mango Sticky Rice", price: 8, category: "Dessert" },
+      { name: "Coconut Ice Cream", price: 6, category: "Dessert" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_7",
+    dishes: [
+      { name: "Falafel Wrap", price: 12, category: "Main Course" },
+      { name: "Hummus with Pita", price: 9, category: "Starter" },
+      { name: "Shawarma Plate", price: 15, category: "Main Course" },
+      { name: "Lentil Soup", price: 7, category: "Soup" },
+      { name: "Greek Salad", price: 10, category: "Salad" },
+      { name: "Baklava", price: 6, category: "Dessert" },
+      { name: "Grilled Kebab", price: 16, category: "Main Course" },
+      { name: "Tabbouleh", price: 8, category: "Salad" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_8",
+    dishes: [
+      { name: "Sizzling Fajitas", price: 17, category: "Main Course" },
+      { name: "Nachos", price: 10, category: "Starter" },
+      { name: "Tacos al Pastor", price: 14, category: "Main Course" },
+      { name: "Guacamole", price: 8, category: "Starter" },
+      { name: "Quesadilla", price: 12, category: "Main Course" },
+      { name: "Chicken Enchiladas", price: 16, category: "Main Course" },
+      { name: "Churros", price: 7, category: "Dessert" },
+      { name: "Flan", price: 6, category: "Dessert" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_9",
+    dishes: [
+      { name: "Croissant", price: 5, category: "Starter" },
+      { name: "French Onion Soup", price: 9, category: "Soup" },
+      { name: "Ratatouille", price: 15, category: "Main Course" },
+      { name: "Coq au Vin", price: 20, category: "Main Course" },
+      { name: "Nicoise Salad", price: 12, category: "Salad" },
+      { name: "Quiche Lorraine", price: 14, category: "Main Course" },
+      { name: "Creme Brulee", price: 8, category: "Dessert" },
+      { name: "Macarons", price: 7, category: "Dessert" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_10",
+    dishes: [
+      { name: "Kimchi Stew", price: 13, category: "Soup" },
+      { name: "Bibimbap", price: 16, category: "Main Course" },
+      { name: "Korean Fried Chicken", price: 14, category: "Starter" },
+      { name: "Japchae", price: 15, category: "Main Course" },
+      { name: "Bulgogi", price: 18, category: "Main Course" },
+      { name: "Seafood Pancake", price: 12, category: "Starter" },
+      { name: "Hotteok", price: 6, category: "Dessert" },
+      { name: "Bingsu", price: 8, category: "Dessert" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_11",
+    dishes: [
+      { name: "Fish and Chips", price: 15, category: "Main Course" },
+      { name: "Shepherd’s Pie", price: 17, category: "Main Course" },
+      { name: "Mushroom Soup", price: 8, category: "Soup" },
+      { name: "Cauliflower Cheese", price: 10, category: "Starter" },
+      { name: "Ploughman’s Salad", price: 11, category: "Salad" },
+      { name: "Scotch Eggs", price: 9, category: "Starter" },
+      { name: "Sticky Toffee Pudding", price: 7, category: "Dessert" },
+      { name: "Trifle", price: 8, category: "Dessert" },
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_12",
+    dishes: [
+      { name: "Peking Duck", price: 24, category: "Main Course" },
+      { name: "Sweet and Sour Pork", price: 16, category: "Main Course" },
+      { name: "Dumplings", price: 9, category: "Starter" },
+      { name: "Hot and Sour Soup", price: 8, category: "Soup" },
+      { name: "Kung Pao Chicken", price: 17, category: "Main Course" },
+      { name: "Fried Rice", price: 12, category: "Main Course" },
+      { name: "Spring Rolls", price: 7, category: "Starter" },
+      { name: "Sesame Balls", price: 6, category: "Dessert" },
+    ],
   },
 ];
 
-export { carouselImages, restaurants, slots };
+
+export { carouselImages, menu, restaurants, slots };
+
