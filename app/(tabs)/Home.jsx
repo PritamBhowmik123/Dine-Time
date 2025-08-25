@@ -8,23 +8,33 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { assets } from '../../assets/assets'
 import { db } from '../../config/firebaseConfig'
 const Home = () => {
-  const temp = async() => {
+  const temp = async () => {
     const value = await AsyncStorage.getItem("isGuest");
     const email = await AsyncStorage.getItem("userEmail");
     console.log(value, email);
   }
 
   const [restaurants, setRestaurants] = useState([])
-  const getRestaurants = async ()=>{
-    const q = query(collection(db,"restaurants"));
+  const [isGuest, setIsGuest] = useState(true);
+  const checkIsGuest = async() => {
+    const email = await AsyncStorage.getItem("userEmail");
+    if(email){
+      setIsGuest(false);
+    }else{
+      setIsGuest(true);
+    }
+  }
+  const getRestaurants = async () => {
+    const q = query(collection(db, "restaurants"));
     const res = await getDocs(q);
     res.forEach((item) => {
-      setRestaurants((prev)=>[...prev, item.data()])
+      setRestaurants((prev) => [...prev, item.data()])
     })
   }
   useEffect(() => {
     getRestaurants();
     temp();
+    checkIsGuest();
   }, []);
   const renderItem = ({ item }) => (
     <TouchableOpacity
@@ -58,6 +68,18 @@ const Home = () => {
           </View>
         </View>
       </View>
+      {isGuest && (
+        <View className="w-full items-center mt-2 flex flex-row justify-center">
+          <TouchableOpacity
+            className="bg-[#f49b33] px-6 py-3 rounded-xl"
+            onPress={() => router.push('/Signin')}
+          >
+            <Text className="text-white font-bold text-base">Signin</Text>
+          </TouchableOpacity>
+          <Text className="text-white font-semibold ml-4">To get more features unlocked</Text>
+        </View>
+
+      )}
       <ScrollView stickyHeaderIndices={[0]}>
         <ImageBackground
           resizeMode="cover"
